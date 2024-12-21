@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 
 # Load the trained model
-model = pickle.load(open('files_for_training_model/model.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
 app = Flask(__name__)
 
