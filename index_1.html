@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Price Predictor</title>
+</head>
+<body>
+    <h1>Laptop Price Predictor</h1>
+    <form action="/predict" method="post">
+
+        <!-- Dropdown for Company -->
+        <label for="Company">Company:</label>
+        <select name="Company" id="Company">
+            <option value="Apple">Apple</option>
+            <option value="Dell">Dell</option>
+            <option value="HP">HP</option>
+            <option value="Lenovo">Lenovo</option>
+            <option value="Asus">Asus</option>
+            <option value="Acer">Acer</option>
+            <option value="MSI">MSI</option>
+        </select><br><br>
+
+        <!-- Dropdown for TypeName -->
+        <label for="TypeName">Type:</label>
+        <select name="TypeName" id="TypeName">
+            <option value="Ultrabook">Ultrabook</option>
+            <option value="Notebook">Notebook</option>
+            <option value="Gaming">Gaming</option>
+            <option value="2-in-1">2-in-1</option>
+            <option value="Workstation">Workstation</option>
+        </select><br><br>
+
+        <!-- Dropdown for Ram -->
+        <label for="Ram">RAM (GB):</label>
+        <select name="Ram" id="Ram">
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="8">8</option>
+            <option value="16">16</option>
+            <option value="32">32</option>
+            <option value="64">64</option>
+        </select><br><br>
+
+        <!-- Dropdown for Weight Category -->
+        <label for="Weight_Category">Weight Category:</label>
+        <select name="Weight_Category" id="Weight_Category">
+            <option value="Light">Light</option>
+            <option value="Medium">Medium</option>
+            <option value="Heavy">Heavy</option>
+        </select><br><br>
+
+        <!-- Dropdown for CPU Brand -->
+        <label for="Cpu_brand">CPU Brand:</label>
+        <select name="Cpu_brand" id="Cpu_brand">
+            <option value="Intel Core i3">Intel Core i3</option>
+            <option value="Intel Core i5">Intel Core i5</option>
+            <option value="Intel Core i7">Intel Core i7</option>
+            <option value="AMD Ryzen 5">AMD Ryzen 5</option>
+            <option value="AMD Ryzen 7">AMD Ryzen 7</option>
+        </select><br><br>
+
+        <!-- Dropdown for HDD -->
+        <label for="HDD">HDD (GB):</label>
+        <select name="HDD" id="HDD">
+            <option value="0">0</option>
+            <option value="256">256</option>
+            <option value="512">512</option>
+            <option value="1024">1024</option>
+            <option value="2000">2000</option>
+        </select><br><br>
+
+        <!-- Dropdown for SSD -->
+        <label for="SSD">SSD (GB):</label>
+        <select name="SSD" id="SSD">
+            <option value="0">0</option>
+            <option value="128">128</option>
+            <option value="256">256</option>
+            <option value="512">512</option>
+            <option value="1024">1024</option>
+        </select><br><br>
+
+        <!-- Dropdown for GPU Brand -->
+        <label for="Gpu_brand">GPU Brand:</label>
+        <select name="Gpu_brand" id="Gpu_brand">
+            <option value="Intel">Intel</option>
+            <option value="AMD">AMD</option>
+            <option value="Nvidia">Nvidia</option>
+        </select><br><br>
+
+        <!-- Dropdown for OS -->
+        <label for="Os">Operating System:</label>
+        <select name="Os" id="Os">
+            <option value="Windows">Windows</option>
+            <option value="Mac">Mac</option>
+            <option value="Linux">Linux</option>
+        </select><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Predict Price</button>
+
+    </form>
+
+    <!-- Display Prediction -->
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
